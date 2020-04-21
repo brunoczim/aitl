@@ -169,6 +169,7 @@ var toIpaTable = {
   '\\hs': 'ɧ',
   '\\H': 'ʜ',
   '\\i': 'ɨ',
+  '\\I': 'ᵻ',
   '\\jh': 'ʝ',
   '\\j\'': 'ʄ',
   '\\J': 'ɟ',
@@ -200,8 +201,8 @@ var toIpaTable = {
   '\\r_': '˞',
   '\\R': 'ʀ',
   '\\T': '\u031d',
-  '\\u_': 'ʉ',
-  '\\ui': 'ᵿ',
+  '\\u': 'ʉ',
+  '\\U': 'ᵿ',
   '\\v': 'ⱱ',
   '\\V|' : 'ꜜ',
   '\\w': 'ɰ',
@@ -283,7 +284,7 @@ var toIpaTable = {
   '_F': 'ᶬ',
   '_G': 'ˠ',
   '_H': 'ᶣ',
-  '_I': 'ɪ',
+  '_I': 'ᶦ',
   '_J': 'ᶮ',
   //'_K': 'ɬ',
   //'_L': 'ʎ',
@@ -330,6 +331,7 @@ var toIpaTable = {
   //'_\\hs': 'ɧ',
   //'_\\H': 'ʜ',
   '_\\i': 'ᶤ',
+  '_\\I': 'ᶧ',
   '_\\jh': 'ᶨ',
   //'_\\j\'': 'ʄ',
   '_\\J': 'ᶡ',
@@ -357,6 +359,7 @@ var toIpaTable = {
   '_\\r_': '˞',
   //'_\\R': 'ʀ',
   '_\\u': 'ᶶ',
+  //'_\\U': 'ᵿ',
   //'_\\v': 'ⱱ',
   '_\\w': 'ᶭ',
   '_\\z': 'ᶽ',
@@ -481,16 +484,36 @@ var phones = {
     name: 'open back unrounded vowel',
     link: 'https://en.wikipedia.org/wiki/Open_back_unrounded_vowel'
   },
+  'ᵅ': {
+    name: 'superscript (secondary) open back unrounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Open_back_unrounded_vowel'
+  },
   'æ': {
     name: 'near-open front unrounded vowel',
+    link: 'https://en.wikipedia.org/wiki/Near-open_front_unrounded_vowel'
+  },
+  'ᵆ': {
+    name: 'superscript (secondary) near-open front unrounded vowel',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Near-open_front_unrounded_vowel'
   },
   'ɐ': {
     name: 'near-open central unrounded vowel',
     link: 'https://en.wikipedia.org/wiki/Near-open_central_unrounded_vowel'
   },
+  'ᵄ': {
+    name: 'superscript (secondary) near-open central unrounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Near-open_central_unrounded_vowel'
+  },
   'ɒ': {
     name: 'open back rounded vowel',
+    link: 'https://en.wikipedia.org/wiki/Open_back_rounded_vowel'
+  },
+  'ᶛ': {
+    name: 'superscript (secondary) open back rounded vowel',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Open_back_rounded_vowel'
   },
   'ɓ': {
@@ -513,6 +536,11 @@ var phones = {
     name: 'voiceless alveolo-palatal fricative',
     link: 'https://en.wikipedia.org/wiki/Voiceless_alveolo-palatal_fricative'
   },
+  'ᶝ': {
+    name: 'superscript (secondary) voiceless alveolo-palatal fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_alveolo-palatal_fricative'
+  },
   'ɗ': {
     name: 'voiced alveolar implosive',
     link: 'https://en.wikipedia.org/wiki/Voiced_alveolar_implosive'
@@ -521,12 +549,22 @@ var phones = {
     name: 'voiced dental fricative',
     link: 'https://en.wikipedia.org/wiki/Voiced_dental_fricative'
   },
+  'ᶞ': {
+    name: 'superscript (secondary) voiced dental fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_dental_fricative'
+  },
   'ɖ': {
     name: 'voiced retroflex stop',
     link: 'https://en.wikipedia.org/wiki/Voiced_retroflex_stop'
   },
   'ə': {
     name: 'mid central vowel',
+    link: 'https://en.wikipedia.org/wiki/Mid_central_vowel'
+  },
+  'ᵊ': {
+    name: 'superscript (secondary) mid central vowel',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Mid_central_vowel'
   },
   'ɚ': {
@@ -541,8 +579,18 @@ var phones = {
     name: 'open-mid front unrounded vowel',
     link: 'https://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel'
   },
+  'ᵋ': {
+    name: 'superscript (secondary) open-mid front unrounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel'
+  },
   'ɜ': {
     name: 'open-mid central unrounded vowel',
+    link: 'https://en.wikipedia.org/wiki/Open-mid_central_unrounded_vowel'
+  },
+  'ᵌ': {
+    name: 'superscript (secondary) open-mid central unrounded vowel',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Open-mid_central_unrounded_vowel'
   },
   'ɝ': {
@@ -555,6 +603,11 @@ var phones = {
   },
   'ɸ': {
     name: 'voiceless bilabial fricative',
+    link: 'https://en.wikipedia.org/wiki/Voiceless_bilabial_fricative'
+  },
+  'ᶲ': {
+    name: 'superscript (secondary) voiceless bilabial fricative',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Voiceless_bilabial_fricative'
   },
   'ɣ': {
@@ -597,13 +650,35 @@ var phones = {
     name: 'voiced labio-palatal approximant',
     link: 'https://en.wikipedia.org/wiki/Voiced_labio-velar_approximant'
   },
+  'ᶣ': {
+    name: 'superscript (secondary) voiced labio-palatal approximant',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_labio-velar_approximant'
+  },
   'ɨ': {
     name: 'close central unrounded vowel',
+    link: 'https://en.wikipedia.org/wiki/Close_central_unrounded_vowel'
+  },
+  'ᶤ': {
+    name: 'superscript (secondary) close central unrounded vowel',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Close_central_unrounded_vowel'
   },
   'ɪ': {
     name: 'near-close front unrounded vowel',
     link: 'https://en.wikipedia.org/wiki/Near-close_front_unrounded_vowel'
+  },
+  'ᶦ': {
+    name: 'superscript (secondary) near-close front unrounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Near-close_front_unrounded_vowel'
+  },
+  'ᵻ': {
+    name: 'near-close central unrounded vowel (extra-IPA)'
+  },
+  'ᶧ': {
+    name: 'superscript (secondary) near-close central unrounded vowel (extra-IPA)',
+    needsCircle: true
   },
   'ʄ': {
     name: 'voiced palatal implosive',
@@ -613,9 +688,23 @@ var phones = {
     name: 'voiced palatal fricative',
     link: 'https://en.wikipedia.org/wiki/Voiced_palatal_fricative'
   },
+  'ᶨ': {
+    name: 'superscript (secondary) voiced palatal fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_palatal_fricative'
+  },
   'ɟ': {
     name: 'voiced palatal stop',
     link: 'https://en.wikipedia.org/wiki/Voiced_palatal_stop'
+  },
+  'ᶡ': {
+    name: 'superscript (secondary) voiced palatal stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_palatal_stop'
+  },
+  'ʞ': {
+    name: 'back-released velar click',
+    link: 'https://en.wikipedia.org/wiki/Back-released_velar_click',
   },
   'ɫ': {
     name: 'velarized voiced alveolar lateral approximant',
@@ -623,6 +712,11 @@ var phones = {
   },
   'ɭ': {
     name: 'retroflex lateral approximant',
+    link: 'https://en.wikipedia.org/wiki/Retroflex_lateral_approximant'
+  },
+  'ᶩ': {
+    name: 'superscript (secondary) retroflex lateral approximant',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Retroflex_lateral_approximant'
   },
   'ɬ': {
@@ -637,33 +731,73 @@ var phones = {
     name: 'voiced velar lateral approximant',
     link: 'https://en.wikipedia.org/wiki/Velar_lateral_approximant'
   },
+  'ᶫ': {
+    name: 'superscript (secondary) voiced velar lateral approximant',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Velar_lateral_approximant'
+  },
   'ɱ': {
     name: 'labiodental nasal',
+    link: 'https://en.wikipedia.org/wiki/Labiodental_nasal'
+  },
+  'ᶬ': {
+    name: 'superscript (secondary) labiodental nasal',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Labiodental_nasal'
   },
   'ɲ': {
     name: 'palatal nasal',
     link: 'https://en.wikipedia.org/wiki/Palatal_nasal'
   },
+  'ᶮ': {
+    name: 'superscript (secondary) palatal nasal',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Palatal_nasal'
+  },
   'ŋ': {
     name: 'velar nasal',
+    link: 'https://en.wikipedia.org/wiki/Velar_nasal'
+  },
+  'ᵑ': {
+    name: 'superscript (secondary) velar nasal',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Velar_nasal'
   },
   'ɳ': {
     name: 'retroflex nasal',
     link: 'https://en.wikipedia.org/wiki/Retroflex_nasal'
   },
+  'ᶯ': {
+    name: 'superscript (secondary) retroflex nasal',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Retroflex_nasal'
+  },
   'ɴ': {
     name: 'uvular nasal',
+    link: 'https://en.wikipedia.org/wiki/Uvular_nasal'
+  },
+  'ᶰ': {
+    name: 'superscript (secondary) uvular nasal',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Uvular_nasal'
   },
   'ɔ': {
     name: 'open-mid back rounded vowel',
     link: 'https://en.wikipedia.org/wiki/Open-mid_back_rounded_vowel'
   },
+  'ᵓ': {
+    name: 'superscript (secondary) open-mid back rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Open-mid_back_rounded_vowel'
+  },
   'œ': {
     name: 'open-mid front rounded vowel',
     link: 'https://en.wikipedia.org/wiki/Open-mid_front_rounded_vowel'
+  },
+  'ꟹ': {
+    name: 'open-labialization (extra-IPA) or superscript (secondary) open-mid front rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Labialization#Types',
   },
   'ø': {
     name: 'close-mid front rounded vowel',
@@ -677,8 +811,18 @@ var phones = {
     name: 'close-mid central rounded vowel',
     link: 'https://en.wikipedia.org/wiki/Close-mid_central_rounded_vowel'
   },
+  'ᶱ': {
+    name: 'superscript (secondary) close-mid central rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Close-mid_central_rounded_vowel'
+  },
   'ɹ': {
     name: 'voiced alveolar approximant',
+    link: 'https://en.wikipedia.org/wiki/Alveolar_and_postalveolar_approximants'
+  },
+  'ʴ': {
+    name: 'superscript (secondary) voiced alveolar approximant',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Alveolar_and_postalveolar_approximants'
   },
   'ɾ': {
@@ -693,8 +837,18 @@ var phones = {
     name: 'voiced uvular fricative',
     link: 'https://en.wikipedia.org/wiki/Voiced_vular_fricative'
   },
+  'ʶ': {
+    name: 'superscript (secondary) voiced uvular fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_vular_fricative'
+  },
   'ɻ': {
     name: 'voiced retroflex approximant',
+    link: 'https://en.wikipedia.org/wiki/Retroflex_approximant'
+  },
+  'ʵ': {
+    name: 'superscript (secondary) voiced retroflex approximant',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Retroflex_approximant'
   },
   'ɽ': {
@@ -709,12 +863,27 @@ var phones = {
     name: 'voiceless palato-alveolar fricative',
     link: 'https://en.wikipedia.org/wiki/Voiceless_postalveolar_fricative'
   },
+  'ᶴ': {
+    name: 'superscript (secondary) voiceless palato-alveolar fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_postalveolar_fricative'
+  },
   'ʂ': {
     name: 'voiceless retroflex fricative',
     link: 'https://en.wikipedia.org/wiki/Voiceless_retroflex_fricative'
   },
+  'ᶳ': {
+    name: 'superscript (secondary) voiceless retroflex fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_retroflex_fricative'
+  },
   'θ': {
     name: 'voiceless dental fricative',
+    link: 'https://en.wikipedia.org/wiki/Voicess_dentral_fricative'
+  },
+  'ᶿ': {
+    name: 'superscript (secondary) voiceless dental fricative',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Voicess_dentral_fricative'
   },
   'ʈ': {
@@ -725,9 +894,22 @@ var phones = {
     name: 'near-close back rounded vowel',
     link: 'https://en.wikipedia.org/wiki/Near-close_back_rounded_vowel'
   },
-  'ʉ': {
+  'ᶷ': {
+    name: 'superscript (secondary) near-close back rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Near-close_back_rounded_vowel'
+  },
+  'ᶶ': {
     name: 'close central rounded vowel',
     link: 'https://en.wikipedia.org/wiki/Close_central_rounded_vowel'
+  },
+  'ʉ': {
+    name: 'superscript (secondary) close central rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Close_central_rounded_vowel'
+  },
+  'ᵿ': {
+    name: 'near-close central rounded vowel (extra-IPA)',
   },
   'ⱱ': {
     name: 'labiodental flap',
@@ -737,16 +919,36 @@ var phones = {
     name: 'voiced labiodental approximant',
     link: 'https://en.wikipedia.org/wiki/Labiodental_approximant'
   },
+  'ᶹ': {
+    name: 'compressed rounding (extra-IPA) or superscript (secondary) voiced labiodental approximant',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Labiodental_approximant'
+  },
   'ʌ': {
     name: 'open-mid back unrounded vowel',
+    link: 'httpś://en.wikipedia.org/wiki/Open-mid_back_unrounded_vowel'
+  },
+  'ᶺ': {
+    name: 'superscript (secondary) open-mid back unrounded vowel',
+    needsCircle: true,
     link: 'httpś://en.wikipedia.org/wiki/Open-mid_back_unrounded_vowel'
   },
   'ɰ': {
     name: 'voiced velar approximant',
     link: 'https://en.wikipedia.org/wiki/Velar_approximant'
   },
+  'ᶭ': {
+    name: 'superscript (secondary) voiced velar approximant',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Velar_approximant'
+  },
   'ɯ': {
     name: 'close back unrounded vowel',
+    link: 'https://en.wikipedia.org/wiki/Close_back_unrounded_vowel'
+  },
+  'ᵚ': {
+    name: 'superscript (secondary) close back unrounded vowel',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Close_back_unrounded_vowel'
   },
   'ʍ': {
@@ -755,6 +957,11 @@ var phones = {
   },
   'χ': {
     name: 'voiceless uvular fricative',
+    link: 'https://en.wikipedia.org/wiki/Voiceless_uvular_fricative'
+  },
+  'ᵡ': {
+    name: 'superscript (secondary) voiceless uvular fricative',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Voiceless_uvular_fricative'
   },
   'ʎ': {
@@ -769,12 +976,27 @@ var phones = {
     name: 'voiced palato-alveolar fricative',
     link: 'https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative'
   },
+  'ᶾ': {
+    name: 'superscript (secondary) voiced palato-alveolar fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative'
+  },
   'ʐ': {
     name: 'voiced retroflex fricative',
     link: 'https://en.wikipedia.org/wiki/Voiced_retroflex_fricative'
   },
+  'ᶼ': {
+    name: 'superscript (secondary) voiced retroflex fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_retroflex_fricative'
+  },
   'ʑ': {
     name: 'voiced alveolo-palatal fricative',
+    link: 'https://en.wikipedia.org/wiki/Voiced_alveolo-palatal_fricative'
+  },
+  'ᶽ': {
+    name: 'superscript (secondary) voiced alveolo-palatal fricative',
+    needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Voiced_alveolo-palatal_fricative'
   },
   'ʔ': {
@@ -894,7 +1116,7 @@ var phones = {
     link: 'https://en.wikipedia.org/wiki/Dental_consonant'
   },
   '\u033b': {
-    name: 'laminal diacritic',
+    name: 'laminal diacritic (extra-IPA)',
     diacritic: true,
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Laminal_consonant'
@@ -978,7 +1200,7 @@ var phones = {
     link: 'https://en.wikipedia.org/wiki/Creaky_voice'
   },
   '\u033c': {
-    name: 'linguolabial diacritic',
+    name: 'linguolabial diacritic (extra-IPA)',
     diacritic: true,
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Linguolabial_consonant'
@@ -1161,32 +1383,32 @@ var phones = {
     link: 'https://en.wikipedia.org/wiki/Velarization'
   },
   'ˠ': {
-    name: 'velarized',
+    name: 'velarized or secondary voiced velar fricative',
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Velarization'
   },
   'ʲ': {
-    name: 'palatalized',
+    name: 'palatalized or secondary voiced palatal approximant',
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Palatalization_(phonetics)'
   },
   'ʷ': {
-    name: 'labialized or protruded rounding',
+    name: 'labialized, protruded rounding or secondary voiced labio-velar approximant',
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Labialization'
   },
   'ᵝ': {
-    name: 'compressed rounding',
+    name: 'compressed rounding (extra-IPA) or secondary voiced bilabial fricative',
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Roundedness#Types_of_rounding'
   },
   'ˡ': {
-    name: 'lateral release',
+    name: 'lateral release or secondary voiced alveolar lateral approximant',
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Lateral_release_(phonetics)'
   },
   'ⁿ': {
-    name: 'nasal release',
+    name: 'nasal release or secondary alveolar nasal',
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Nasal_release'
   },
@@ -1199,5 +1421,108 @@ var phones = {
     name: 'tenuis',
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Tenuis_consonant'
+  },
+  '.': {
+    name: 'syllable break',
+  },
+  'ᵃ': {
+    name: 'superscript (secondary) open front unrounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Open_front_unrounded_vowel'
+  },
+  'ᵇ': {
+    name: 'superscript (secondary) voiced bilabial stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_bilabial_stop'
+  },
+  'ᶜ': {
+    name: 'superscript (secondary) voiceless palatal stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_palatal_stop'
+  },
+  'ᵈ': {
+    name: 'superscript (secondary) voiced alveolar stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_alveolar_stop'
+  },
+  'ᵉ': {
+    name: 'superscript (secondary) close-mid front unrounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel'
+  },
+  'ᶠ': {
+    name: 'superscript (secondary) voiceless labiodental fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_labiodental_fricative'
+  },
+  'ᵍ': {
+    name: 'superscript (secondary) voiced velar stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_velar_stop'
+  },
+  'ⁱ': {
+    name: 'superscript (secondary) close front unrounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Close_front_unrounded_vowel'
+  },
+  'ᵏ': {
+    name: 'superscript (secondary) voiceless velar stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_velar_stop'
+  },
+  'ᵐ': {
+    name: 'superscript (secondary) bilabial nasal',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Bilabial_nasal'
+  },
+  'ᵒ': {
+    name: 'superscript (secondary) close-mid back rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel'
+  },
+  'ᵖ': {
+    name: 'superscript (secondary) voiceless bilabial stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_bilabial_stop'
+  },
+  'ʳ': {
+    name: 'superscript (secondary) alveolar trill',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Alveolar_trill'
+  },
+  'ˢ': {
+    name: 'superscript (secondary) voiceless alveolar fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative'
+  },
+  'ᵗ': {
+    name: 'superscript (secondary) voiceless alveolar stop',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_alveolar_stop'
+  },
+  'ᵘ': {
+    name: 'superscript (secondary) close back rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Close_back_rounded_vowel'
+  },
+  'ᵛ': {
+    name: 'superscript (secondary) voiced labiodental fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_labiodental_fricative'
+  },
+  'ˣ': {
+    name: 'superscript (secondary) voiceless velar fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiceless_velar_fricative'
+  },
+  'ʸ': {
+    name: 'superscript (secondary) close front rounded vowel',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Close_front_rounded_vowel'
+  },
+  'ᶻ': {
+    name: 'superscript (secondary) voiced alveolar fricative',
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Voiced_alveolar_fricative'
   }
 };
