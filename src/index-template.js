@@ -1,9 +1,9 @@
 const escapeHtml = require('./escape-html');
 
-function makeTableBody(table, phones, pad) {
+function makeTableBody(phoneMapping, phones, pad) {
   let output = '';
-  for (let aitl in table) {
-    let ipa = table[aitl];
+  for (let aitl in phoneMapping) {
+    let ipa = phoneMapping[aitl];
     let desc = '';
     if (ipa in phones) {
       if ('link' in phones[ipa]) {
@@ -26,8 +26,8 @@ ${pad}</tr>
   return output;
 }
 
-module.exports = (table, phones) => {
-  const tableBody = makeTableBody(table, phones, '            ');
+module.exports = (phoneMapping, phones) => {
+  const tableBody = makeTableBody(phoneMapping, phones, '            ');
   return `<!DOCTYPE html>
 <html lang="en">
   <head>

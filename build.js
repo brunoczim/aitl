@@ -15,11 +15,11 @@ const outputDir = 'public';
 main();
 
 async function main() {
-  const { toIpa, fromIpa } = buildTables();
+  const { phoneMapping, toIpa, fromIpa } = buildTables();
   await makeOutputDir();
   await Promise.all([
     writeMainJs(toIpa, fromIpa),
-    writeIndexHtml(toIpa),
+    writeIndexHtml(phoneMapping),
     copyMainCss(),
   ]);
 }
@@ -36,9 +36,9 @@ async function copyMainCss() {
   await copyFile('main.css', `${outputDir}/main.css`);
 }
 
-async function writeIndexHtml(toIpa) {
+async function writeIndexHtml(phoneMapping) {
   const indexHtml = await open(`${outputDir}/index.html`, 'w');
-  await write(indexHtml, template(toIpa, phones));
+  await write(indexHtml, template(phoneMapping, phones));
 }
 
 async function writeMainJs(toIpa, fromIpa) {
@@ -56,16 +56,25 @@ async function writeMainJs(toIpa, fromIpa) {
 }
 
 function buildTables() {
+  const phoneMapping = {};
   const toIpa = {};
   const fromIpa = {};
   for (let key in table) {
     let aitl = `{${key}}`;
     toIpa[aitl] = table[key];
+    phoneMapping[aitl] = table[key];
     fromIpa[toIpa[aitl]] = aitl;
   }
+
+  for (let i = 0; i < 26; i++) {
+    let ch = String.fromCharCode('a'.charCodeAt(0) + i);
+    phoneMapping[ch] = ch;
+  }
+
   return {
     toIpa,
     fromIpa,
+    phoneMapping,
   };
 }
 
