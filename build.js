@@ -3,7 +3,6 @@ const fs = require('fs');
 const template = require('./src/index-template');
 const table = require('./src/table');
 const phones = require('./src/phones');
-const makeTable = require('./src/make-tree');
 
 const open = promisify(fs.open);
 const write = promisify(fs.write);
