@@ -1,2 +1,2 @@
-# abtipa
+# aitl
 ASCII Bijection To IPA

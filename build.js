@@ -60,9 +60,9 @@ function buildTables() {
   const toIpa = {};
   const fromIpa = {};
   for (let key in table) {
-    let abtipa = `{${key}}`;
-    toIpa[abtipa] = table[key];
-    fromIpa[toIpa[abtipa]] = abtipa;
+    let aitl = `{${key}}`;
+    toIpa[aitl] = table[key];
+    fromIpa[toIpa[aitl]] = aitl;
   }
   return {
     toIpa,

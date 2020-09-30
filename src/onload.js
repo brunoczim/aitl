@@ -1,10 +1,10 @@
 window.onload = function () {
-  var abtipaInput = document.getElementById("textarea-abtipa");
+  var aitlInput = document.getElementById("textarea-aitl");
   var ipaInput = document.getElementById("textarea-ipa");
-  abtipaInput.onkeyup = function () {
-    ipaInput.value = toIpa(abtipaInput.value);
+  aitlInput.onkeyup = function () {
+    ipaInput.value = toIpa(aitlInput.value);
   };
   ipaInput.onkeyup = function () {
-    abtipaInput.value = fromIpa(ipaInput.value);
+    aitlInput.value = fromIpa(ipaInput.value);
   };
 };

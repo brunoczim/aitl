@@ -2,8 +2,8 @@ const escapeHtml = require('./escape-html');
 
 function makeTableBody(table, phones, pad) {
   let output = '';
-  for (let abtipa in table) {
-    let ipa = table[abtipa];
+  for (let aitl in table) {
+    let ipa = table[aitl];
     let desc = '';
     if (ipa in phones) {
       if ('link' in phones[ipa]) {
@@ -17,7 +17,7 @@ function makeTableBody(table, phones, pad) {
       }
     }
     output += `${pad}<tr>
-${pad}  <td>${escapeHtml(abtipa)}</td>
+${pad}  <td>${escapeHtml(aitl)}</td>
 ${pad}  <td>${escapeHtml(ipa)}</td>
 ${pad}  <td>${(desc)}</td>
 ${pad}</tr>
@@ -31,7 +31,7 @@ module.exports = (table, phones) => {
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ABTIPA ─ ASCII Bijection To IPA</title>
+    <title>AITL ─ ASCII-IPA Translation Language</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
@@ -39,12 +39,12 @@ module.exports = (table, phones) => {
   </head>
   <body>
     <div id="page-wrapper">
-      <h1>ASCII Bijection To IPA</h1>
-      <a href="abtipa.zip">Download Site</a>
-      <div id="abtipa-area">
-        <label for="textarea-abtipa">ABTIPA</label>
+      <h1>ASCII-IPA Translation Language</h1>
+      <a href="aitl.zip">Download Site</a>
+      <div id="aitl-area">
+        <label for="textarea-aitl">AITL</label>
         <div class="textarea">
-            <textarea id="textarea-abtipa"></textarea>
+            <textarea id="textarea-aitl"></textarea>
         </div>
       </div>
       <div id="ipa-area">
@@ -57,7 +57,7 @@ module.exports = (table, phones) => {
         <table>
           <thead>
             <tr>
-              <th>ABTIPA</th>
+              <th>AITL</th>
               <th>IPA</th>
               <th>Description</th>
             </tr>
