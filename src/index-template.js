@@ -7,9 +7,10 @@ function makeTableBody(table, phones, pad) {
     let desc = '';
     if (ipa in phones) {
       if ('link' in phones[ipa]) {
-        desc = `<a href=${phones[ipa].link}>${phones[ipa].name}</a>`;
+        let escaped = escapeHtml(phones[ipa].name);
+        desc = `<a href=${phones[ipa].link}>${escaped}</a>`;
       } else {
-        desc = phones[ipa].name;
+        desc = `${escapeHtml(phones[ipa].name)}`;
       }
       if (phones[ipa].needsCircle) {
         ipa = "◌" + ipa;
@@ -18,7 +19,7 @@ function makeTableBody(table, phones, pad) {
     output += `${pad}<tr>
 ${pad}  <td>${escapeHtml(abtipa)}</td>
 ${pad}  <td>${escapeHtml(ipa)}</td>
-${pad}  <td>${escapeHtml(desc)}</td>
+${pad}  <td>${(desc)}</td>
 ${pad}</tr>
 `;
   }
