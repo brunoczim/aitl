@@ -3,7 +3,7 @@ const escapeHtml = require('./escape-html');
 function makeTableBody(table, phones, pad) {
   let output = '';
   for (let abtipa in table) {
-    const ipa = table[abtipa];
+    let ipa = table[abtipa];
     let desc = '';
     if (ipa in phones) {
       if ('link' in phones[ipa]) {
@@ -16,9 +16,9 @@ function makeTableBody(table, phones, pad) {
       }
     }
     output += `${pad}<tr>
-${pad}  <td>${abtipa}</td>
-${pad}  <td>${ipa}</td>
-${pad}  <td>${desc}</td>
+${pad}  <td>${escapeHtml(abtipa)}</td>
+${pad}  <td>${escapeHtml(ipa)}</td>
+${pad}  <td>${escapeHtml(desc)}</td>
 ${pad}</tr>
 `;
   }
@@ -33,21 +33,21 @@ module.exports = (table, phones) => {
     <title>ABTIPA ─ ASCII Bijection To IPA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
   </head>
   <body>
     <div id="page-wrapper">
       <h1>ASCII Bijection To IPA</h1>
       <div id="abtipa-area">
-        <label for="abtipa-text-area">ABTIPA</label>
-        <div id="textarea-abtipa" class="textarea">
+        <label for="textarea-abtipa">ABTIPA</label>
+        <div class="textarea">
             <textarea id="textarea-abtipa"></textarea>
         </div>
       </div>
       <div id="ipa-area">
-        <label for="ipa-text-area">IPA</label>
-        <div id="textarea-ipa" class="textarea">
+        <label for="textarea-ipa">IPA</label>
+        <div class="textarea">
             <textarea id="textarea-ipa"></textarea>
         </div>
       </div>
