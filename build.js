@@ -3,6 +3,7 @@ const fs = require('fs');
 const template = require('./src/index-template');
 const table = require('./src/table');
 const phones = require('./src/phones');
+const makeTable = require('./src/make-tree');
 
 const open = promisify(fs.open);
 const write = promisify(fs.write);
@@ -36,7 +37,7 @@ async function copyMainCss() {
   await copyFile('main.css', `${outputDir}/main.css`);
 }
 
-  async function writeIndexHtml(toIpa) {
+async function writeIndexHtml(toIpa) {
   const indexHtml = await open(`${outputDir}/index.html`, 'w');
   await write(indexHtml, template(toIpa, phones));
 }
@@ -63,12 +64,15 @@ function buildTables() {
     toIpa[abtipa] = table[key];
     fromIpa[toIpa[abtipa]] = abtipa;
   }
-  return { toIpa, fromIpa };
+  return {
+    toIpa,
+    fromIpa,
+  };
 }
 
 async function writeTables(mainjs, toIpa, fromIpa) {
-  const toIpaString = JSON.stringify(toIpa, 4);
-  const fromIpaString = JSON.stringify(fromIpa, 4);
+  const toIpaString = JSON.stringify(toIpa, null, 2);
+  const fromIpaString = JSON.stringify(fromIpa, null, 2);
   await write(mainjs, `var toIpaTable = ${toIpaString};\n`);
   await write(mainjs, `var fromIpaTable = ${fromIpaString};\n`);
 }
