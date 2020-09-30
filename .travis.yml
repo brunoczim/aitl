@@ -6,8 +6,8 @@ os:
 
 script:
   - node build.js
-  - zip -r abtipa.zip public/
-  - mv abtipa.zip public/abtipa.zip
+  - zip -r abtipa.zip docs/
+  - mv abtipa.zip docs/abtipa.zip
 
 deploy:
   provider: pages
