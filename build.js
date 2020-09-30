@@ -10,7 +10,7 @@ const read = promisify(fs.read);
 const mkdir = promisify(fs.mkdir);
 const copyFile = promisify(fs.copyFile);
 
-const outputDir = 'public';
+const outputDir = 'docs';
 
 main();
 
