@@ -40,6 +40,7 @@ module.exports = (table, phones) => {
   <body>
     <div id="page-wrapper">
       <h1>ASCII Bijection To IPA</h1>
+      <a href="abtipa.zip">Download Site</a>
       <div id="abtipa-area">
         <label for="textarea-abtipa">ABTIPA</label>
         <div class="textarea">

@@ -22,7 +22,9 @@ module.exports = table => {
     let newEditList = [];
     for (let node of editList) {
       let diff = diffIndex(node);
-      for (let item of node.editList) {
+      if (diff == 0) {
+        for (let item of node.editList) {
+        }
       }
     }
     editList = newEditList;
