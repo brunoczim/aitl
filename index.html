@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ABTIPA ─ ASCII Bijection To IPA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <h1>ASCII Bijection To IPA</h1>
+      <a href="abtipa.zip">Download Site</a>
+      <div id="abtipa-area">
+        <label for="textarea-abtipa">ABTIPA</label>
+        <div class="textarea">
+            <textarea id="textarea-abtipa"></textarea>
+        </div>
+      </div>
+      <div id="ipa-area">
+        <label for="textarea-ipa">IPA</label>
+        <div class="textarea">
+            <textarea id="textarea-ipa"></textarea>
+        </div>
+      </div>
+      <div id="conversion-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ABTIPA</th>
+              <th>IPA</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="conversion-table-body">            <tr>
+              <td>{0}</td>
+              <td>∅</td>
+              <td>nothing</td>
+            </tr>
+            <tr>
+              <td>{1}</td>
+              <td>˩</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>extra low tone</a></td>
+            </tr>
+            <tr>
+              <td>{2}</td>
+              <td>˨</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>low tone</a></td>
+            </tr>
+            <tr>
+              <td>{3}</td>
+              <td>˧</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>mid tone</a></td>
+            </tr>
+            <tr>
+              <td>{4}</td>
+              <td>˦</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>high tone</a></td>
+            </tr>
+            <tr>
+              <td>{5}</td>
+              <td>˥</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>extra high tone</a></td>
+            </tr>
+            <tr>
+              <td>{a}</td>
+              <td>ɑ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open_back_unrounded_vowel>open back unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{ao}</td>
+              <td>ɒ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open_back_rounded_vowel>open back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{ae}</td>
+              <td>æ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-open_front_unrounded_vowel>near-open front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{aa}</td>
+              <td>ɐ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-open_central_unrounded_vowel>near-open central unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{A}</td>
+              <td>ʌ</td>
+              <td><a href=httpś://en.wikipedia.org/wiki/Open-mid_back_unrounded_vowel>open-mid back unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{b}</td>
+              <td>β</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_bilabial_fricative>voiced bilabial fricative</a></td>
+            </tr>
+            <tr>
+              <td>{b&#39;}</td>
+              <td>ɓ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_bilabial_implosive>voiced bilabial implosive</a></td>
+            </tr>
+            <tr>
+              <td>{B}</td>
+              <td>ʙ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_bilabial_trill>voiced bilabial trill</a></td>
+            </tr>
+            <tr>
+              <td>{c}</td>
+              <td>ç</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_palatal_fricative>voiceless palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{cs}</td>
+              <td>ɕ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_alveolo-palatal_fricative>voiceless alveolo-palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{d}</td>
+              <td>ð</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_dental_fricative>voiced dental fricative</a></td>
+            </tr>
+            <tr>
+              <td>{dr}</td>
+              <td>ɖ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_retroflex_stop>voiced retroflex stop</a></td>
+            </tr>
+            <tr>
+              <td>{d&#39;}</td>
+              <td>ɗ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_alveolar_implosive>voiced alveolar implosive</a></td>
+            </tr>
+            <tr>
+              <td>{dr&#39;}</td>
+              <td>ᶑ</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>{e}</td>
+              <td>ɛ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel>open-mid front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{ee}</td>
+              <td>ə</td>
+              <td><a href=https://en.wikipedia.org/wiki/Mid_central_vowel>mid central vowel</a></td>
+            </tr>
+            <tr>
+              <td>{er}</td>
+              <td>ɚ</td>
+              <td><a href=https://en.wikipedia.org/wiki/R-colored_vowel>R-colored mid central vowel</a></td>
+            </tr>
+            <tr>
+              <td>{ea}</td>
+              <td>ɜ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_central_unrounded_vowel>open-mid central unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{ear}</td>
+              <td>ɝ</td>
+              <td><a href=https://en.wikipedia.org/wiki/R-colored_vowel>R-colored open-mid central unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{eo}</td>
+              <td>ɞ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_central_rounded_vowel>open-mid central rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{f}</td>
+              <td>ɸ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_bilabial_fricative>voiceless bilabial fricative</a></td>
+            </tr>
+            <tr>
+              <td>{g}</td>
+              <td>ɣ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_velar_fricative>voiced velar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{g&#39;}</td>
+              <td>ɠ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_velar_implosive>voiced velar implosive</a></td>
+            </tr>
+            <tr>
+              <td>{G}</td>
+              <td>ɢ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_uvular_stop>voiced uvular stop</a></td>
+            </tr>
+            <tr>
+              <td>{G&#39;}</td>
+              <td>ʛ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_uvular_implosive>voiced uvular implosive</a></td>
+            </tr>
+            <tr>
+              <td>{h}</td>
+              <td>ɦ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Breathy-voiced_glottal_transition>breathy-voiced glottal transition</a></td>
+            </tr>
+            <tr>
+              <td>{ha}</td>
+              <td>ħ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_pharyngeal_fricative>voiceless pharyngeal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{hs}</td>
+              <td>ɧ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Sj-sound>sj-sound</a></td>
+            </tr>
+            <tr>
+              <td>{hy}</td>
+              <td>ɥ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_labio-velar_approximant>voiced labio-palatal approximant</a></td>
+            </tr>
+            <tr>
+              <td>{H}</td>
+              <td>ʜ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_epiglottal_fricative>voiceless epiglottal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{i}</td>
+              <td>ɨ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_central_unrounded_vowel>close central unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{I}</td>
+              <td>ɪ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-close_front_unrounded_vowel>near-close front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{I-}</td>
+              <td>ᵻ</td>
+              <td>near-close central unrounded vowel (extra-IPA)</td>
+            </tr>
+            <tr>
+              <td>{j}</td>
+              <td>ʝ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_palatal_fricative>voiced palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{J&#39;}</td>
+              <td>ʄ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_palatal_implosive>voiced palatal implosive</a></td>
+            </tr>
+            <tr>
+              <td>{J}</td>
+              <td>ɟ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_palatal_stop>voiced palatal stop</a></td>
+            </tr>
+            <tr>
+              <td>{k}</td>
+              <td>ʡ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Epiglottal_stop>epiglottal stop</a></td>
+            </tr>
+            <tr>
+              <td>{l}</td>
+              <td>ʎ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Palatal_lateral_approximant>palatal lateral approximant</a></td>
+            </tr>
+            <tr>
+              <td>{lr}</td>
+              <td>ɭ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_lateral_approximant>retroflex lateral approximant</a></td>
+            </tr>
+            <tr>
+              <td>{ls}</td>
+              <td>ɬ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_lateral_fricatives>voiceless alveolar lateral fricative</a></td>
+            </tr>
+            <tr>
+              <td>{l~}</td>
+              <td>ɫ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Dental,_alveolar_and_postalveolar_lateral_approximants#Velarized_alveolar_lateral_approximant>velarized voiced alveolar lateral approximant</a></td>
+            </tr>
+            <tr>
+              <td>{lz}</td>
+              <td>ɮ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_dental_and_alveolar_lateral_fricatives>voiced alveolar lateral fricative</a></td>
+            </tr>
+            <tr>
+              <td>{L}</td>
+              <td>ʟ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velar_lateral_approximant>voiced velar lateral approximant</a></td>
+            </tr>
+            <tr>
+              <td>{m}</td>
+              <td>ɱ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Labiodental_nasal>labiodental nasal</a></td>
+            </tr>
+            <tr>
+              <td>{n}</td>
+              <td>ŋ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velar_nasal>velar nasal</a></td>
+            </tr>
+            <tr>
+              <td>{nj}</td>
+              <td>ɲ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Palatal_nasal>palatal nasal</a></td>
+            </tr>
+            <tr>
+              <td>{nr}</td>
+              <td>ɳ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_nasal>retroflex nasal</a></td>
+            </tr>
+            <tr>
+              <td>{N}</td>
+              <td>ɴ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Uvular_nasal>uvular nasal</a></td>
+            </tr>
+            <tr>
+              <td>{o}</td>
+              <td>ɔ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_back_rounded_vowel>open-mid back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{oe}</td>
+              <td>œ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_front_rounded_vowel>open-mid front rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{oi}</td>
+              <td>ø</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close-mid_front_rounded_vowel>close-mid front rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{o-}</td>
+              <td>ɵ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close-mid_central_rounded_vowel>close-mid central rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{og}</td>
+              <td>ɤ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close-mid_back_unrounded_vowel>close-mid back unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{oE}</td>
+              <td>ɶ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open_front_rounded_vowel>open front rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{r}</td>
+              <td>ɹ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Alveolar_and_postalveolar_approximants>voiced alveolar approximant</a></td>
+            </tr>
+            <tr>
+              <td>{rd}</td>
+              <td>ɾ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Dental_and_alveolar_taps_and_flaps>alveolar tap</a></td>
+            </tr>
+            <tr>
+              <td>{rD}</td>
+              <td>ɽ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_flap>retroflex flap</a></td>
+            </tr>
+            <tr>
+              <td>{rr}</td>
+              <td>ɻ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_approximant>voiced retroflex approximant</a></td>
+            </tr>
+            <tr>
+              <td>{rl}</td>
+              <td>ɺ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Dental_and_alveolar_lateral_flaps>alveolar lateral flap</a></td>
+            </tr>
+            <tr>
+              <td>{r_}</td>
+              <td>◌˞</td>
+              <td><a href=https://en.wikipedia.org/wiki/R-colored_vowel>R-colored</a></td>
+            </tr>
+            <tr>
+              <td>{r?}</td>
+              <td>ʢ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_epiglottal_trill>voiced epiglottal trill</a></td>
+            </tr>
+            <tr>
+              <td>{R}</td>
+              <td>ʀ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Uvular_trill>uvular trill</a></td>
+            </tr>
+            <tr>
+              <td>{Rh}</td>
+              <td>ʁ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_vular_fricative>voiced uvular fricative</a></td>
+            </tr>
+            <tr>
+              <td>{s}</td>
+              <td>ʃ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_postalveolar_fricative>voiceless palato-alveolar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{sr}</td>
+              <td>ʂ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_retroflex_fricative>voiceless retroflex fricative</a></td>
+            </tr>
+            <tr>
+              <td>{t}</td>
+              <td>θ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voicess_dentral_fricative>voiceless dental fricative</a></td>
+            </tr>
+            <tr>
+              <td>{tr}</td>
+              <td>ʈ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_dentral_stop>voiceless retroflex stop</a></td>
+            </tr>
+            <tr>
+              <td>{u}</td>
+              <td>ɯ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_back_unrounded_vowel>close back unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{u-}</td>
+              <td>◌ʉ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_central_rounded_vowel>superscript (secondary) close central rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{U}</td>
+              <td>ʊ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-close_back_rounded_vowel>near-close back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{U-}</td>
+              <td>ᵿ</td>
+              <td>near-close central rounded vowel (extra-IPA)</td>
+            </tr>
+            <tr>
+              <td>{vw}</td>
+              <td>ʋ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Labiodental_approximant>voiced labiodental approximant</a></td>
+            </tr>
+            <tr>
+              <td>{vr}</td>
+              <td>ⱱ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Labiodental_flap>labiodental flap</a></td>
+            </tr>
+            <tr>
+              <td>{w}</td>
+              <td>ɰ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velar_approximant>voiced velar approximant</a></td>
+            </tr>
+            <tr>
+              <td>{wh}</td>
+              <td>ʍ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_labialized_velar_approximant>voiceless labio-velar approximant</a></td>
+            </tr>
+            <tr>
+              <td>{x}</td>
+              <td>χ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_uvular_fricative>voiceless uvular fricative</a></td>
+            </tr>
+            <tr>
+              <td>{y}</td>
+              <td>ʏ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-close_front_rounded_vowel>near-close front rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{z}</td>
+              <td>ʒ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative>voiced palato-alveolar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{zr}</td>
+              <td>ʐ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_retroflex_fricative>voiced retroflex fricative</a></td>
+            </tr>
+            <tr>
+              <td>{zc}</td>
+              <td>ʑ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_alveolo-palatal_fricative>voiced alveolo-palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{?}</td>
+              <td>ʔ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Glottal_stop>glottal stop</a></td>
+            </tr>
+            <tr>
+              <td>{??}</td>
+              <td>ʕ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative>voiced pharyngeal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{!b}</td>
+              <td>ʘ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Bilabial_click>bilabial click</a></td>
+            </tr>
+            <tr>
+              <td>{!t}</td>
+              <td>ǀ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Dental_click>dental click</a></td>
+            </tr>
+            <tr>
+              <td>{!s}</td>
+              <td>ǃ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Alveolar_click>alveolar click</a></td>
+            </tr>
+            <tr>
+              <td>{!r}</td>
+              <td>‼</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_click>retroflex click</a></td>
+            </tr>
+            <tr>
+              <td>{!l}</td>
+              <td>ǁ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Lateral_click>lateral click</a></td>
+            </tr>
+            <tr>
+              <td>{!c}</td>
+              <td>ǂ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Palatal_click>palatal click</a></td>
+            </tr>
+            <tr>
+              <td>{!k}</td>
+              <td>ʞ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Back-released_velar_click>back-released velar click</a></td>
+            </tr>
+            <tr>
+              <td>{_}</td>
+              <td>‿</td>
+              <td><a href=https://en.wikipedia.org/wiki/Connected_speech>connected speech</a></td>
+            </tr>
+            <tr>
+              <td>{:}</td>
+              <td>ː</td>
+              <td><a href=https://en.wikipedia.org/wiki/Length_(phonetics)>long</a></td>
+            </tr>
+            <tr>
+              <td>{=}</td>
+              <td>◌˭</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tenuis_consonant>tenuis</a></td>
+            </tr>
+            <tr>
+              <td>{`}</td>
+              <td>◌ʼ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Ejective_consonant>ejective</a></td>
+            </tr>
+            <tr>
+              <td>{&#39;}</td>
+              <td>ˈ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Stress_(linguistics)>primary stress</a></td>
+            </tr>
+            <tr>
+              <td>{&quot;}</td>
+              <td>ˌ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Stress_(linguistics)>secondary stress</a></td>
+            </tr>
+            <tr>
+              <td>{~}</td>
+              <td>◌̃</td>
+              <td><a href=https://en.wikipedia.org/wiki/Nasal_vowel>nasalized diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{-.}</td>
+              <td>◌̚</td>
+              <td><a href=https://en.wikipedia.org/wiki/Unreleased_stop>no audible release diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{&quot;h}</td>
+              <td>◌̤</td>
+              <td><a href=https://en.wikipedia.org/wiki/Breathy_voice>breathy-voiced diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{||}</td>
+              <td>‖</td>
+              <td><a href=https://en.wikipedia.org/wiki/Prosodic_unit>major group (intonation)</a></td>
+            </tr>
+            <tr>
+              <td>{#^0}</td>
+              <td>◌̊</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voicelessness>voiceless upper diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#0}</td>
+              <td>◌̥</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voicelessness>voiceless lower diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#^}</td>
+              <td>ꜛ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Upstep>upstep</a></td>
+            </tr>
+            <tr>
+              <td>{#t=}</td>
+              <td>◌̪</td>
+              <td><a href=https://en.wikipedia.org/wiki/Dental_consonant>dental diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#t&gt;}</td>
+              <td>◌̻</td>
+              <td><a href=https://en.wikipedia.org/wiki/Laminal_consonant>laminal diacritic (extra-IPA)</a></td>
+            </tr>
+            <tr>
+              <td>{#t|}</td>
+              <td>◌̺</td>
+              <td><a href=https://en.wikipedia.org/wiki/Apical_consonant>apical diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#t~}</td>
+              <td>◌̼</td>
+              <td><a href=https://en.wikipedia.org/wiki/Linguolabial_consonant>linguolabial diacritic (extra-IPA)</a></td>
+            </tr>
+            <tr>
+              <td>{#|_}</td>
+              <td>◌̝</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Raised>raised diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#T}</td>
+              <td>◌̞</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Lowered>lowered diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{T}</td>
+              <td>◌˕</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Lowered>lowered</a></td>
+            </tr>
+            <tr>
+              <td>{|_}</td>
+              <td>◌˔</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Raised>raised</a></td>
+            </tr>
+            <tr>
+              <td>{#~}</td>
+              <td>◌̴</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velarization>velarized or pharyngealized diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{O+}</td>
+              <td>◌̹</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#More_and_less_rounded>more rounded diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{O-}</td>
+              <td>◌̜</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#More_and_less_rounded>less rounded diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{Q+}</td>
+              <td>◌̘</td>
+              <td><a href=https://en.wikipedia.org/wiki/Advanced_and_retracted_tongue_root>advanced tongue root diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{Q-}</td>
+              <td>◌̙</td>
+              <td><a href=https://en.wikipedia.org/wiki/Advanced_and_retracted_tongue_root>retracted tongue root diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#x}</td>
+              <td>◌̽</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Mid-centralized_vowels>mid centralized diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{*}</td>
+              <td>ˑ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Length_(phonetics)>half-long</a></td>
+            </tr>
+            <tr>
+              <td>{#^_}</td>
+              <td>◌͡</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tie_(typography)#International_Phonetic_Alphabet>upper tie bar (affricate or coarticulation) diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#_}</td>
+              <td>◌͜</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tie_(typography)#International_Phonetic_Alphabet>lower tie bar (affricate or coarticulation) diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#^.}</td>
+              <td>◌̑</td>
+              <td><a href=https://en.wikipedia.org/wiki/Semivowel>non-syllabic upper diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#.}</td>
+              <td>◌̯</td>
+              <td><a href=https://en.wikipedia.org/wiki/Semivowel>non-syllabic lower diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{+}</td>
+              <td>◌˖</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Advanced>advanced</a></td>
+            </tr>
+            <tr>
+              <td>{-}</td>
+              <td>◌˗</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Retracted>retracted</a></td>
+            </tr>
+            <tr>
+              <td>{#+}</td>
+              <td>◌̟</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Advanced>advanced diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#-}</td>
+              <td>◌̠</td>
+              <td><a href=https://en.wikipedia.org/wiki/Relative_articulation#Retracted>retracted diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#V}</td>
+              <td>ꜜ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Downstep>downstep</a></td>
+            </tr>
+            <tr>
+              <td>{#:}</td>
+              <td>◌̈</td>
+              <td><a href=https://en.wikipedia.org/wiki/Central_vowel>centralized diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#1}</td>
+              <td>◌̏</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>extra low diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#2}</td>
+              <td>◌̀</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>low diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#3}</td>
+              <td>◌̄</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>mid diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#4}</td>
+              <td>◌́</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>high diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#5}</td>
+              <td>◌̋</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>very high diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#52}</td>
+              <td>◌̂</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>falling diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#34}</td>
+              <td>◌̌</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>rising diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#13}</td>
+              <td>◌᷅</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>low rising diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#55}</td>
+              <td>◌᷄</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>high rising diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{#524}</td>
+              <td>◌᷈</td>
+              <td><a href=https://en.wikipedia.org/wiki/Tone_(linguistics)>rising-falling diacritic</a></td>
+            </tr>
+            <tr>
+              <td>{^-a}</td>
+              <td>◌ᵃ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open_front_unrounded_vowel>superscript (secondary) open front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^a}</td>
+              <td>◌ᵅ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open_back_unrounded_vowel>superscript (secondary) open back unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^ao}</td>
+              <td>◌ᶛ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open_back_rounded_vowel>superscript (secondary) open back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^ae}</td>
+              <td>◌ᵆ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-open_front_unrounded_vowel>superscript (secondary) near-open front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^aa}</td>
+              <td>◌ᵄ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-open_central_unrounded_vowel>superscript (secondary) near-open central unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^A}</td>
+              <td>◌ᶺ</td>
+              <td><a href=httpś://en.wikipedia.org/wiki/Open-mid_back_unrounded_vowel>superscript (secondary) open-mid back unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^-b}</td>
+              <td>◌ᵇ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_bilabial_stop>superscript (secondary) voiced bilabial stop</a></td>
+            </tr>
+            <tr>
+              <td>{^b}</td>
+              <td>◌ᵝ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Roundedness#Types_of_rounding>compressed rounding (extra-IPA) or secondary voiced bilabial fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^c}</td>
+              <td>ç</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_palatal_fricative>voiceless palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^cs}</td>
+              <td>◌ᶝ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_alveolo-palatal_fricative>superscript (secondary) voiceless alveolo-palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^-d}</td>
+              <td>◌ᵈ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_alveolar_stop>superscript (secondary) voiced alveolar stop</a></td>
+            </tr>
+            <tr>
+              <td>{^d}</td>
+              <td>◌ᶞ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_dental_fricative>superscript (secondary) voiced dental fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^dr}</td>
+              <td>ɖ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_retroflex_stop>voiced retroflex stop</a></td>
+            </tr>
+            <tr>
+              <td>{^-e}</td>
+              <td>◌ᵉ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel>superscript (secondary) close-mid front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^e}</td>
+              <td>◌ᵋ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel>superscript (secondary) open-mid front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^ee}</td>
+              <td>◌ᵊ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Mid_central_vowel>superscript (secondary) mid central vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^ea}</td>
+              <td>◌ᵌ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_central_unrounded_vowel>superscript (secondary) open-mid central unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^-f}</td>
+              <td>◌ᶠ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_labiodental_fricative>superscript (secondary) voiceless labiodental fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^f}</td>
+              <td>◌ᶲ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_bilabial_fricative>superscript (secondary) voiceless bilabial fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^-g}</td>
+              <td>◌ᵍ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_velar_stop>superscript (secondary) voiced velar stop</a></td>
+            </tr>
+            <tr>
+              <td>{^g}</td>
+              <td>◌ˠ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velarization>velarized or secondary voiced velar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^h}</td>
+              <td>◌ʱ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Breathy_voice>breathy-voiced</a></td>
+            </tr>
+            <tr>
+              <td>{^-h}</td>
+              <td>◌ʰ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Aspirated_consonant>aspirated</a></td>
+            </tr>
+            <tr>
+              <td>{^hy}</td>
+              <td>◌ᶣ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_labio-velar_approximant>superscript (secondary) voiced labio-palatal approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^-i}</td>
+              <td>◌ⁱ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_front_unrounded_vowel>superscript (secondary) close front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^i}</td>
+              <td>◌ᶤ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_central_unrounded_vowel>superscript (secondary) close central unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^I}</td>
+              <td>◌ᶦ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-close_front_unrounded_vowel>superscript (secondary) near-close front unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^I-}</td>
+              <td>◌ᶧ</td>
+              <td>superscript (secondary) near-close central unrounded vowel (extra-IPA)</td>
+            </tr>
+            <tr>
+              <td>{^-j}</td>
+              <td>◌ʲ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Palatalization_(phonetics)>palatalized or secondary voiced palatal approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^j}</td>
+              <td>◌ᶨ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_palatal_fricative>superscript (secondary) voiced palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^J}</td>
+              <td>◌ᶡ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_palatal_stop>superscript (secondary) voiced palatal stop</a></td>
+            </tr>
+            <tr>
+              <td>{^-k}</td>
+              <td>◌ᵏ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_velar_stop>superscript (secondary) voiceless velar stop</a></td>
+            </tr>
+            <tr>
+              <td>{^-l}</td>
+              <td>◌ˡ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Lateral_release_(phonetics)>lateral release or secondary voiced alveolar lateral approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^lr}</td>
+              <td>◌ᶩ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_lateral_approximant>superscript (secondary) retroflex lateral approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^L}</td>
+              <td>◌ᶫ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velar_lateral_approximant>superscript (secondary) voiced velar lateral approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^-m}</td>
+              <td>◌ᵐ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Bilabial_nasal>superscript (secondary) bilabial nasal</a></td>
+            </tr>
+            <tr>
+              <td>{^m}</td>
+              <td>◌ᶬ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Labiodental_nasal>superscript (secondary) labiodental nasal</a></td>
+            </tr>
+            <tr>
+              <td>{^-n}</td>
+              <td>◌ⁿ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Nasal_release>nasal release or secondary alveolar nasal</a></td>
+            </tr>
+            <tr>
+              <td>{^n}</td>
+              <td>◌ᵑ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velar_nasal>superscript (secondary) velar nasal</a></td>
+            </tr>
+            <tr>
+              <td>{^nj}</td>
+              <td>◌ᶮ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Palatal_nasal>superscript (secondary) palatal nasal</a></td>
+            </tr>
+            <tr>
+              <td>{^nr}</td>
+              <td>◌ᶯ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_nasal>superscript (secondary) retroflex nasal</a></td>
+            </tr>
+            <tr>
+              <td>{^N}</td>
+              <td>◌ᶰ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Uvular_nasal>superscript (secondary) uvular nasal</a></td>
+            </tr>
+            <tr>
+              <td>{^-o}</td>
+              <td>◌ᵒ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel>superscript (secondary) close-mid back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^o}</td>
+              <td>◌ᵓ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Open-mid_back_rounded_vowel>superscript (secondary) open-mid back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^oe}</td>
+              <td>◌ꟹ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Labialization#Types>open-labialization (extra-IPA) or superscript (secondary) open-mid front rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^o-}</td>
+              <td>◌ᶱ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close-mid_central_rounded_vowel>superscript (secondary) close-mid central rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^-p}</td>
+              <td>◌ᵖ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_bilabial_stop>superscript (secondary) voiceless bilabial stop</a></td>
+            </tr>
+            <tr>
+              <td>{^-r}</td>
+              <td>◌ʳ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Alveolar_trill>superscript (secondary) alveolar trill</a></td>
+            </tr>
+            <tr>
+              <td>{^r}</td>
+              <td>◌ʴ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Alveolar_and_postalveolar_approximants>superscript (secondary) voiced alveolar approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^rr}</td>
+              <td>◌ʵ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Retroflex_approximant>superscript (secondary) voiced retroflex approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^r_}</td>
+              <td>◌˞</td>
+              <td><a href=https://en.wikipedia.org/wiki/R-colored_vowel>R-colored</a></td>
+            </tr>
+            <tr>
+              <td>{^Rh}</td>
+              <td>◌ʶ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_vular_fricative>superscript (secondary) voiced uvular fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^-s}</td>
+              <td>◌ˢ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative>superscript (secondary) voiceless alveolar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^s}</td>
+              <td>◌ᶴ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_postalveolar_fricative>superscript (secondary) voiceless palato-alveolar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^sr}</td>
+              <td>◌ᶳ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_retroflex_fricative>superscript (secondary) voiceless retroflex fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^-t}</td>
+              <td>◌ᵗ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_alveolar_stop>superscript (secondary) voiceless alveolar stop</a></td>
+            </tr>
+            <tr>
+              <td>{^t}</td>
+              <td>◌ᶿ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voicess_dentral_fricative>superscript (secondary) voiceless dental fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^-u}</td>
+              <td>◌ᵘ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_back_rounded_vowel>superscript (secondary) close back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^u}</td>
+              <td>◌ᵚ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_back_unrounded_vowel>superscript (secondary) close back unrounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^u-}</td>
+              <td>ᶶ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_central_rounded_vowel>close central rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^U}</td>
+              <td>◌ᶷ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Near-close_back_rounded_vowel>superscript (secondary) near-close back rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^v}</td>
+              <td>◌ᵛ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_labiodental_fricative>superscript (secondary) voiced labiodental fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^vw}</td>
+              <td>◌ᶹ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Labiodental_approximant>compressed rounding (extra-IPA) or superscript (secondary) voiced labiodental approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^-w}</td>
+              <td>◌ʷ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Labialization>labialized, protruded rounding or secondary voiced labio-velar approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^w}</td>
+              <td>◌ᶭ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Velar_approximant>superscript (secondary) voiced velar approximant</a></td>
+            </tr>
+            <tr>
+              <td>{^-x}</td>
+              <td>◌ˣ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_velar_fricative>superscript (secondary) voiceless velar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^x}</td>
+              <td>◌ᵡ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiceless_uvular_fricative>superscript (secondary) voiceless uvular fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^-y}</td>
+              <td>◌ʸ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Close_front_rounded_vowel>superscript (secondary) close front rounded vowel</a></td>
+            </tr>
+            <tr>
+              <td>{^-z}</td>
+              <td>◌ᶻ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_alveolar_fricative>superscript (secondary) voiced alveolar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^z}</td>
+              <td>◌ᶾ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative>superscript (secondary) voiced palato-alveolar fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^zr}</td>
+              <td>◌ᶼ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_retroflex_fricative>superscript (secondary) voiced retroflex fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^zc}</td>
+              <td>◌ᶽ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Voiced_alveolo-palatal_fricative>superscript (secondary) voiced alveolo-palatal fricative</a></td>
+            </tr>
+            <tr>
+              <td>{^?}</td>
+              <td>◌ˀ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Glottalization>glottalized</a></td>
+            </tr>
+            <tr>
+              <td>{^??}</td>
+              <td>◌ˤ</td>
+              <td><a href=https://en.wikipedia.org/wiki/Pharyngealization>pharyngealized</a></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
