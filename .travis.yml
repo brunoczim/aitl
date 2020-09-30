@@ -10,10 +10,10 @@ script:
   - mv abtipa.zip public/abtipa.zip
 
 deploy:
-  provider: public
+  provider: pages
   token: $GITHUB_TOKEN
   keep_history: true
-  local_dir: book
+  local_dir: public
   skip_cleanup: true
   on:
     branch: master
