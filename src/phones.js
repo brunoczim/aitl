@@ -717,6 +717,12 @@ module.exports = {
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Voice_(phonetics)'
   },
+  '\u0330': {
+    name: 'creaky-voiced diacritic',
+    diacritic: true,
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Creaky_voice'
+  },
   '\u0361': {
     name: 'upper tie bar (affricate or coarticulation) diacritic',
     diacritic: true,
