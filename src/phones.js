@@ -825,12 +825,6 @@ module.exports = {
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Breathy_voice'
   },
-  '\u0330': {
-    name: 'creaky-voiced diacritic',
-    diacritic: true,
-    needsCircle: true,
-    link: 'https://en.wikipedia.org/wiki/Creaky_voice'
-  },
   '\u033c': {
     name: 'linguolabial diacritic (extra-IPA)',
     diacritic: true,
