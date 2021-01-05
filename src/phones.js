@@ -661,7 +661,7 @@ module.exports = {
     name: 'extra short diacritic',
     diacritic: true,
     needsCircle: true,
-    link: 'https://en.wikipedia.org/wiki/Length_(phonetics)'
+    link: 'https://en.wikipedia.org/wiki/Extra-shortness'
   },
   '\u0329': {
     name: 'syllabic lower diacritic',
