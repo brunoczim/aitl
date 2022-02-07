@@ -723,6 +723,12 @@ module.exports = {
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Creaky_voice'
   },
+  '\u0348': {
+    name: 'tense diacritic',
+    diacritic: true,
+    needsCircle: true,
+    link: 'https://en.wikipedia.org/wiki/Tenseness'
+  },
   '\u0361': {
     name: 'upper tie bar (affricate or coarticulation) diacritic',
     diacritic: true,
