@@ -486,12 +486,11 @@ window.onload = function () {
 
   function save() {
     localStorage.setItem("aitl-input", aitlInput.value);
-    localStorage.setItem("aitl-ipa-input", ipaInput.value);
   }
 
   function load() {
     aitlInput.value = localStorage.getItem("aitl-input") || "";
-    ipaInput.value = localStorage.getItem("aitl-ipa-input") || "";
+    ipaInput.value = toIpa(aitlInput.value);
   }
 
   load();
