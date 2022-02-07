@@ -724,7 +724,7 @@ module.exports = {
     link: 'https://en.wikipedia.org/wiki/Creaky_voice'
   },
   '\u0348': {
-    name: 'tense diacritic',
+    name: 'tense/faucalized diacritic',
     diacritic: true,
     needsCircle: true,
     link: 'https://en.wikipedia.org/wiki/Tenseness'
